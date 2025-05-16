@@ -20,7 +20,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="TherapyGPT") as demo:
             )
 
             system = gr.Textbox(
-                lines = 2,
+                lines = 14,
                 label = "System Message",
                 value = "",
                 render = False
@@ -35,7 +35,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="TherapyGPT") as demo:
 
             # Function to prep the system prompt text
             def prep_system_message():
-                return f"{system_prompt}. Review your patient history and start the session. Patient history:\n\n{get_patient_history_text()}"
+                return f"{system_prompt}\n\nReview the patient history and start the session:\n{get_patient_history_text()}"
 
             # Fill the system textbox on load
             demo.load(prep_system_message, outputs=system)
