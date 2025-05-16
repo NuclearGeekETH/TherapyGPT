@@ -1,7 +1,6 @@
 import gradio as gr
 from modules.get_openai_response import chat_response
 from modules.utility import form_load, form_save, get_patient_history_text
-# from utility_scripts.get_ollama_models import ollama_models
 
 with gr.Blocks(theme=gr.themes.Soft(), title="TherapyGPT") as demo:
     gr.Markdown(f"<h1 style='text-align: center; display:block'>{'TherapyGPT'}</h1>")
