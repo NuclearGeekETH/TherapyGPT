@@ -131,7 +131,8 @@ TherapyGPT/
 <summary>Click to show screenshot</summary>
 
 **Form and Chat:**  
-![screenshot](https://raw.githubusercontent.com/NuclearGeekETH/therapyGPT/refs/heads/main/image/therapyGPT.png)  
+![therapyGPT](https://github.com/user-attachments/assets/c961c7ae-4482-4972-a040-6c0a3d8d9f6c)
+
 </details>
 
 ---
