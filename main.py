@@ -118,7 +118,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="TherapyGPT") as demo:
                 bot = gr.Chatbot(render=False, type='messages')
 
                 dropdown = gr.Dropdown(
-                    ["gpt-4o-2024-11-20", "gpt-4.1-2025-04-14", "o4-mini-2025-04-16", "o3-2025-04-16", "gpt-4.5-preview", "o3-mini-2025-01-31", "o1-preview", "o1-mini", "gpt-4o-2024-08-06", "gpt-4o", "gpt-4o-mini", "chatgpt-4o-latest", "gpt-4-0125-preview", "gpt-4-turbo", "gpt-4-1106-preview", "gpt-4"],
+                    ["gpt-4o-2024-11-20", "gpt-4.1-2025-04-14"],
                     label = "Model",
                     value = "gpt-4.1-2025-04-14",
                     render = False
