@@ -128,13 +128,10 @@ TherapyGPT/
 ## Screenshots
 
 <details>
-<summary>Click to show screenshots</summary>
+<summary>Click to show screenshot</summary>
 
-**Form:**  
-![form screenshot](https://user-images.githubusercontent.com/placeholder/therapygpt-intake.png)  
-
-**Chat:**  
-![chat screenshot](https://user-images.githubusercontent.com/placeholder/therapygpt-chat.png)  
+**Form and Chat:**  
+![screenshot](https://user-images.githubusercontent.com/image/therapyGPT.png)  
 </details>
 
 ---
