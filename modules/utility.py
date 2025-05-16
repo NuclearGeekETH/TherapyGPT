@@ -4,10 +4,86 @@ import json
 DATA_FOLDER = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(DATA_FOLDER, "data.json")
 
+BLANK_DATA = {
+    "basic_info": {
+        "full_name": "",
+        "preferred_name": "",
+        "pronouns": "",
+        "date_of_birth": "",
+        "contact_info": {
+            "email": "",
+            "phone": "",
+            "address": ""
+        },
+        "emergency_contact": {
+            "name": "",
+            "relationship": "",
+            "phone": ""
+        }
+    },
+    "presenting_issues": [],
+    "goals_for_therapy": [],
+    "mental_health_history": {
+        "diagnoses": [],
+        "symptoms": [],
+        "medications": [],
+        "past_treatments": [],
+        "hospitalizations": []
+    },
+    "medical_history": {
+        "chronic_conditions": [],
+        "current_medications": [],
+        "significant_past_illnesses_injuries": []
+    },
+    "substance_use": {
+        "current_or_past_use": []
+    },
+    "family_history": {
+        "mental_illness": [],
+        "medical_conditions": [],
+        "relationship_dynamics": []
+    },
+    "trauma_history": [],
+    "social_history": {
+        "living_situation": "",
+        "relationship_status": "",
+        "children": "",
+        "close_support_systems": [],
+        "work_education_history": [],
+        "legal_issues": []
+    },
+    "strengths_interests": [],
+    "values_beliefs": [],
+    "cultural_identity": {
+        "ethnicity": "",
+        "religion": "",
+        "gender_identity": "",
+        "sexual_orientation": "",
+        "other_important_factors": ""
+    },
+    "preferences": {
+        "preferred_therapy_styles": [],
+        "what_helps": [],
+        "what_doesnt_help": [],
+        "therapist_preferences": {
+            "gender": "",
+            "age": "",
+            "cultural_background": "",
+            "languages": ""
+        }
+    },
+    "questions_concerns_for_therapist": [],
+    "other_notes": ""
+}
+
 def load_history():
+    if not os.path.exists(DATA_PATH):
+        with open(DATA_PATH, "w", encoding="utf-8") as f:
+            json.dump(BLANK_DATA, f, indent=2, ensure_ascii=False)
+        return BLANK_DATA
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
-
+    
 def save_history(data):
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)

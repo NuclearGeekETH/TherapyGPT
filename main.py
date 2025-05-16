@@ -1,10 +1,12 @@
 import gradio as gr
 from modules.get_openai_response import chat_response
-from modules.utility import form_load, form_save, get_patient_history_text, system_prompt
+from modules.utility import load_history, form_load, form_save, get_patient_history_text, system_prompt
+
+load_history()
 
 with gr.Blocks(theme=gr.themes.Soft(), title="TherapyGPT") as demo:
     gr.Markdown(f"<h1 style='text-align: center; display:block'>{'TherapyGPT'}</h1>")
-    with gr.Tab("TherapyGPT Chat"):
+    with gr.Tab("TherapyGPT Text Chat"):
         with gr.Column("Chat"):
             gr.Markdown(f"<p>{'Chat with your custom therapist'}</p>")
 
