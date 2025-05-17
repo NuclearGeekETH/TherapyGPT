@@ -101,6 +101,7 @@ TherapyGPT/
 │
 ├── modules/
 │   ├── get_openai_response.py     # Streaming OpenAI chat backend
+│   ├── get_system_prompt.py       # Set the system prompt instructions
 │   ├── patient_form_utility.py    # Intake form data IO/flattening/marshalling
 │   ├── memory_utility.py          # Memory form data IO/flattening/marshalling
 │   ├── data.json                  # Single-patient persistent data store (JSON)
