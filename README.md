@@ -121,7 +121,7 @@ TherapyGPT/
    Click &quot;Save Changes&quot; to persist your data to `modules/data.json`.
 
 3. **Chat with TherapyGPT:**  
-   The chatbot will use **your latest patient history** to tailor initial responses and all subsequent session chats. Memoris can be stored and edited on the Memories tab.
+   The chatbot will use **your latest patient history** and **previously saved memories** to tailor initial responses and all subsequent session chats. Patient history and memories can be edited on their respective tabs or by directly editing the JSON files.
 
 4. **Change Models or System Message:**  
    Use the dropdown to switch models (requires the appropriate OpenAI access), and optionally edit the system message/context sent to the model.
