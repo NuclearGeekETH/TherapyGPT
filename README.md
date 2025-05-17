@@ -133,7 +133,10 @@ TherapyGPT/
 <summary>Click to show screenshot</summary>
 
 **Form and Chat:**  
-![therapyGPT](https://github.com/user-attachments/assets/c961c7ae-4482-4972-a040-6c0a3d8d9f6c)
+![TherapyGPT Text Chat](https://github.com/user-attachments/assets/fe365af3-7d4c-4b57-b4c5-5e11c955cecc)
+![TherapyGPT Patient Data](https://github.com/user-attachments/assets/0d941706-d218-47f7-b6da-988ad70b04b8)
+![TherapyGPT Memories](https://github.com/user-attachments/assets/95b299fc-7def-4def-9e64-527c1a406a86)
+
 
 </details>
 
