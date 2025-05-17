@@ -14,7 +14,7 @@ TherapyGPT is an advanced AI-powered therapy assistant. It provides a **secure, 
   Collect, update, and store detailed patient history — structured to robust clinical standards across mental, medical, social, cultural, and family domains.
 
 - **Dynamic Chat Interface**  
-  Chat with TherapyGPT — an AI therapist whose responses always include your latest patient history as part of the system prompt, ensuring maximum context.
+  Chat with TherapyGPT — an AI therapist whose responses always include your latest patient history and past memories as part of the system prompt, ensuring maximum context.
 
 - **Persistent Patient Data**  
   All history and chat context are stored privately and persist between sessions.
@@ -101,8 +101,10 @@ TherapyGPT/
 │
 ├── modules/
 │   ├── get_openai_response.py     # Streaming OpenAI chat backend
-│   ├── utility.py                 # Intake form data IO/flattening/marshalling
-│   └── data.json                  # Single-patient persistent data store (JSON)
+│   ├── patient_form_utility.py    # Intake form data IO/flattening/marshalling
+│   ├── memory_utility.py          # Memory form data IO/flattening/marshalling
+│   ├── data.json                  # Single-patient persistent data store (JSON)
+│   └── memory.json                # memory persistent data store (JSON)
 │
 └── README.md                      # ← This file!
 ```
@@ -118,7 +120,7 @@ TherapyGPT/
    Click &quot;Save Changes&quot; to persist your data to `modules/data.json`.
 
 3. **Chat with TherapyGPT:**  
-   The chatbot will use **your latest patient history** to tailor initial responses and all subsequent session chats.
+   The chatbot will use **your latest patient history** to tailor initial responses and all subsequent session chats. Memoris can be stored and edited on the Memories tab.
 
 4. **Change Models or System Message:**  
    Use the dropdown to switch models (requires the appropriate OpenAI access), and optionally edit the system message/context sent to the model.
@@ -151,7 +153,7 @@ TherapyGPT/
 
 ## Security and Privacy
 
-- **Data stored locally** in `modules/data.json` by default. **No cloud sync** unless you add it.
+- **Data stored locally** in `modules/data.json` and `modules/memories.json` by default. **No cloud sync** unless you add it.
 - **No patient data is sent to OpenAI** except through your chat input/history/system prompt _which you control_.
 - **HIPAA Compliance:**  
   This project is **not** certified for HIPAA.  
