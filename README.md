@@ -22,7 +22,7 @@ TherapyGPT is an advanced AI-powered therapy assistant. It provides a **secure, 
 - **Modern UX** powered by [Gradio](https://www.gradio.app/) (`blocks`, `tabs`, `chatbot`, live dataframes, and more).
 
 - **Configurable Model Selector**  
-  Swap between OpenAI & provisioned models (e.g., GPT-4o, GPT-4.1 and more) via a dropdown.
+  Swap between OpenAI & Google Gemini models (e.g., GPT-4o, GPT-4.1, and gemini-2.0-flash and more) via a dropdown.
 
 - **Easy Local Deployment**  
   Launch with a single script. Optionally, enable authentication and remote sharing.
@@ -41,6 +41,7 @@ _**Never rely on TherapyGPT for crisis intervention, diagnosis, or medical emerg
 
 - **Python 3.9+**  
 - **[OpenAI API key](https://platform.openai.com/account/api-keys)** (set as an environment variable: `OPENAI_API_KEY`)
+- **Optional: [Google Gemini API key](https://aistudio.google.com/)** (set as an environment variable: `GEMINI_API_KEY`)
 - **pip**
 
 ### Python dependencies
@@ -67,6 +68,13 @@ cd TherapyGPT
 set OPENAI_API_KEY=sk-...             # On Windows (cmd.exe)
 # or
 export OPENAI_API_KEY=sk-...          # On Mac/Linux
+```
+
+**2.5 Optionally set your Google Gemini API key:**
+```bash
+set GEMINI_API_KEY=...             # On Windows (cmd.exe)
+# or
+export GEMINI_API_KEY=...          # On Mac/Linux
 ```
 
 **3. Launch the app:**

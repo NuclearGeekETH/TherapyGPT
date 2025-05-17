@@ -1,11 +1,11 @@
-import openai
+from openai import OpenAI
 import os
 import json
 from datetime import date, datetime
 from collections import defaultdict
 from .memories_utility import load_memory, save_memory
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 # == Core memory save function ==
 def add_memory(summary, time_of_event, therapy_notes):
@@ -60,8 +60,16 @@ def chat_response(message, history, model, system):
     history.insert(0, {"role": "system", "content": f"{system} You have a function to save a memory you want to remember. The function is called 'add_memory'. Tell the user when you added a memory. Current Date: {date.today()}"})
     history.append({"role": "user", "content": message})
 
+    if model == "gemini-2.0-flash":
+        client = OpenAI(
+            api_key=GEMINI_API_KEY,
+            base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+        )
+    else:
+        client = OpenAI()
+
     try:
-        completion = openai.chat.completions.create(
+        completion = client.chat.completions.create(
             model=model,
             messages=history,
             tools=tools,
@@ -112,7 +120,7 @@ def chat_response(message, history, model, system):
                             })
 
                             # == SECOND API CALL (stream reply after function exec) ==
-                            second_completion = openai.chat.completions.create(
+                            second_completion = client.chat.completions.create(
                                 model=model,
                                 messages=history,
                                 stream=True
@@ -142,7 +150,7 @@ def chat_response(message, history, model, system):
                     "content": response
                 })
                 # == SECOND API CALL (stream reply after function exec) ==
-                second_completion = openai.chat.completions.create(
+                second_completion = client.chat.completions.create(
                     model=model,
                     messages=history,
                     stream=True
