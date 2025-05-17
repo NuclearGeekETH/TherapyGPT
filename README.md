@@ -22,7 +22,7 @@ TherapyGPT is an advanced AI-powered therapy assistant. It provides a **secure, 
 - **Modern UX** powered by [Gradio](https://www.gradio.app/) (`blocks`, `tabs`, `chatbot`, live dataframes, and more).
 
 - **Configurable Model Selector**  
-  Swap between OpenAI & provisioned models (e.g., GPT-4o, GPT-4.1, O4 series, ChatGPT, and more) via a dropdown.
+  Swap between OpenAI & provisioned models (e.g., GPT-4o, GPT-4.1 and more) via a dropdown.
 
 - **Easy Local Deployment**  
   Launch with a single script. Optionally, enable authentication and remote sharing.
